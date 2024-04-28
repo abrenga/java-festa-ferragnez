@@ -21,13 +21,23 @@ public class SicurezzaParty {//semplicemente in questa classe c'è tutto quello 
 		return nome;
 	}
 	
-	//all'inizio avevo passato come parametro nella funzione controllaOspite solo il parametro Ospite nomeOspite
+	//all'inizio avevo passato come parametro nella funzione, controllaOspite solo il parametro Ospite nomeOspite
 	//provando l'esercizio mi stampava il puntamento alla cella, e ho preso dalla classe Ospite 
 	//il nome chè è una stringa che viene passato al costruttore
 	public void processa( Ospite nomeOspite) {
 		 boolean isFound = party.controllaOspite(nomeOspite.nome);
-		party.accettaOspite(isFound, nomeOspite);
+		 boolean isLuis = party.isLuis(nomeOspite);
+
+		party.accettaOspite(isFound,isLuis, nomeOspite);
+		
 	}
 
 }
 
+//>Ho riscontrato le seguenti difficolta:
+//capire se si trattava dell'istanza del Ospite o la stringa presente nell'isanza(mi ha aiutato L'IDE), 
+//faccio ancora confusione nel raggionamnto a Classi.
+//Ho speso tanto tempo per fare il BOnus perchè all'inizio volevo passare alla funzione controllaOspite
+//anche la condizione che verificava se era luis ovviamente non riuscivo, Dopo ho invece fatto una funzione a 
+//parte che controllava se era luis e poi ho passato direttamente la funzione di verifica alla funzione accettaOspite
+//ho 
