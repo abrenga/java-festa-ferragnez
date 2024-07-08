@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\POSTAZIONE 1\Desktop\java\java-festa-ferragnez\.metadata\.plugins\org.eclipse.jdt.core
+2235158738.index
+2296365736.index
+1865797976.index
