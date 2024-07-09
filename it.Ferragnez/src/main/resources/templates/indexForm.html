@@ -15,7 +15,7 @@
 		<h1 class="mt-5 fs-2 text-center">Verifica se sei in lista:</h1>
 		<div class=" d-flex align-items-center position-absolute top-50 start-50 translate-middle">
 
-			<form class="mx-auto p-2" style="width: 200px;" id="form-insert" th:object="${utente}" th:action="@{/indexForm/response}"
+			<form class="mx-auto p-2" style="width: 200px;" id="form-insert" th:object="${invitato}" th:action="@{/indexForm/response}"
 				method="post">
 
 				<label for="name">nome:</label>
@@ -28,8 +28,8 @@
 				</div>
 
 
-				<label for="description">Cognome:</label>
-				<input type="text" id="cognome" th:field="*{surname}"
+				<label for="surname">Cognome:</label>
+				<input type="text" id="surname" th:field="*{surname}"
 					th:errorClass="is-invalid">
 				<div th:if="${#fields.hasErrors('surname')}" class="invalid-feedback">
 
