@@ -13,11 +13,14 @@ public class FerragnezModel {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
+	
 	private String name;
 	
-	private String Surmane;
+	
+	private String surname;
 
 	public Integer getId() {
+		
 		return id;
 	}
 
@@ -31,10 +34,10 @@ public class FerragnezModel {
 	}
 
 	public String getSurmane() {
-		return Surmane;
+		return surname;
 	}
 
 	public void setSurmane(String surmane) {
-		Surmane = surmane;
+		surname = surmane;
 	}
 }

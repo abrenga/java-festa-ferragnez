@@ -10,12 +10,12 @@
 </head>
 
 <body>
-	<div th:replace="~{Fragment.html::header-block}"></div>
+	<div th:replace="~{Fragments.html::header-block}"></div>
 	<div class="container p-5">
 		<h1 class="mt-5 fs-2 text-center">Verifica se sei in lista:</h1>
 		<div class=" d-flex align-items-center position-absolute top-50 start-50 translate-middle">
 
-			<form class="mx-auto p-2" style="width: 200px;" id="form-insert" th:object="" th:action="@{/indexForm}"
+			<form class="mx-auto p-2" style="width: 200px;" id="form-insert" th:object="${utente}" th:action="@{/indexForm/response}"
 				method="post">
 
 				<label for="name">nome:</label>
@@ -29,12 +29,12 @@
 
 
 				<label for="description">Cognome:</label>
-				<input type="text" id="cognome" th:field="*{cognome}"
+				<input type="text" id="cognome" th:field="*{surname}"
 					th:errorClass="is-invalid">
-				<div th:if="${#fields.hasErrors('cognome')}" class="invalid-feedback">
+				<div th:if="${#fields.hasErrors('surname')}" class="invalid-feedback">
 
 					<ul>
-						<li th:each="err : ${#fields.errors('cognome')}" th:text="${err}"></li>
+						<li th:each="err : ${#fields.errors('surname')}" th:text="${err}"></li>
 					</ul>
 				</div>
 
@@ -45,7 +45,7 @@
 	</div>
 	</main>
 	</div>
-	<div th:replace="~{Fragment.html::footer-block}"></div>
+	<div th:replace="~{Fragments.html::footer-block}"></div>
 	<script src="https://cdn.jsd
 		elivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
